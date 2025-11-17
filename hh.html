@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>宁海阳户外用品有限公司 - 专业登山杖选购与使用指南</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        :root {
+            --primary: #8B4513;
+            --secondary: #556B2F;
+            --accent: #CD853F;
+            --light: #F5F5DC;
+            --dark: #2F4F4F;
+            --text: #333333;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--text);
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* 导航栏样式 */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .logo i {
+            margin-right: 10px;
+            font-size: 1.8rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 25px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary);
+            transition: width 0.3s;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--dark);
+        }
+        
+        /* 英雄区域样式 */
+        .hero {
+            padding: 100px 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--accent);
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid white;
+        }
+        
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--primary);
+        }
+        
+        /* 产品类别样式 */
+        .categories {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            color: #6c757d;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .category-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .category-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .category-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+            object-fit: cover;
+            object-position: left top;
+            transition: 1s;
+        }
+            img:hover{
+                object-position:right bottom;
+        }
+        
+        .category-card:hover .category-image img {
+            transform: scale(1.1);
+        }
+        
+        .category-content {
+            padding: 20px;
+        }
+        
+        .category-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+        
+        /* 产品展示样式 */
+        .products {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .product-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .product-image {
+            width: 250;
+            overflow: hidden;
+            position: relative;
+            
+          
+        }
+        
+        .product-image img {
+            width:100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: left top;
+            transition: 1s;
+        }
+        img:hover{
+            object-position:right bottom;
+        }
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: var(--accent);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .product-content {
+            padding: 20px;
+        }
+        
+        .product-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+        
+        .product-price {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .product-features {
+            list-style: none;
+            margin-bottom: 15px;
+        }
+        
+        .product-features li {
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+        
+        .product-features li i {
+            color: var(--accent);
+            margin-right: 5px;
+        }
+        
+        /* 指南区域样式 */
+        .guides {
+            padding: 80px 0;
+        }
+        
+        .guides-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .guide-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .guide-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .guide-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .guide-content {
+            padding: 20px;
+        }
+        
+        .guide-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+        
+        .guide-content p {
+            color: #6c757d;
+            margin-bottom: 15px;
+        }
+        
+        .guide-meta {
+            display: flex;
+            justify-content: space-between;
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+        
+        /* 品牌故事样式 */
+        .brand-story {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .story-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .story-text {
+            flex: 1;
+        }
+        
+        .story-text h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+        
+        .story-text p {
+            margin-bottom: 15px;
+            color: #6c757d;
+        }
+        
+        .story-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .story-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-position: left top;
+            transition: 1s;
+        }
+            img:hover{
+                object-position:right bottom;
+        }
+        
+        
+        
+        /* 页脚样式 */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--accent);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #adb5bd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--primary);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #adb5bd;
+            font-size: 0.9rem;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .story-content {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                flex-direction: column;
+                background-color: white;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                transition: left 0.3s;
+                padding: 20px 0;
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .nav-links li {
+                margin: 0;
+                text-align: center;
+            }
+            
+            .nav-links a {
+                display: block;
+                padding: 15px;
+            }
+            
+            .hero {
+                padding: 80px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">
+                    <i class="fas fa-hiking"></i>
+                    <span>宁海康阳户外用品有限公司</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#home">首页</a></li>
+                    <li><a href="#categories">产品分类</a></li>
+                    <li><a href="#products">热门产品</a></li>
+                    <li><a href="#guides">源头工厂</a></li>
+                    <li><a href="#story">品牌故事</a></li>
+                    <li><a href="#contact">联系我们</a></li>
+                </ul>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 英雄区域 -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>专业登山杖，助您征服每一座高峰</h1>
+            <p>精选全球优质登山杖，提供专业选购指南和使用技巧，让您的户外之旅更加安全舒适</p>
+            <a href="#categories" class="btn">探索产品</a>
+            <a href="#guides" class="btn btn-outline">源头工厂</a>
+        </div>
+    </section>
+
+    <!-- 产品类别 -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <div class="section-title">
+                <h2>登山杖分类</h2>
+                <p>根据您的需求选择合适的登山杖类型</p>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://img01.yzcdn.cn/upload_files/2023/07/26/FuoBWwyhhaLo8pTVdm8GjXLVqQ3a.jpg" alt="徒步登山杖">
+                    </div>
+                    <div class="category-content">
+                        <h3>徒步登山杖</h3>
+                        <p>轻便耐用，适合日常徒步和轻度登山</p>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="专业登山杖">
+                    </div>
+                    <div class="category-content">
+                        <h3>专业登山杖</h3>
+                        <p>高强度材质，适合专业登山和复杂地形</p>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1501555088652-021faa106b9b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="折叠登山杖">
+                    </div>
+                    <div class="category-content">
+                        <h3>折叠登山杖</h3>
+                        <p>便携设计，轻松收纳，适合旅行和背包客</p>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://img0.baidu.com/it/u=1854408039,2452151839&fm=253&fmt=auto&app=138&f=JPEG?w=750&h=877" alt="雪地登山杖">
+                    </div>
+                    <div class="category-content">
+                        <h3>雪地登山杖</h3>
+                        <p>特殊设计，提供雪地和冰面额外支撑</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 热门产品 -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>热门产品</h2>
+                <p>精选优质登山杖，满足不同需求</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://t15.baidu.com/it/u=2803774723,1390862118&fm=224&app=112&f=PNG?w=333&h=500" alt="轻量徒步杖">
+                        <div class="product-badge">热销</div>
+                    </div>
+                    <div class="product-content">
+                        <h3>轻量碳纤维徒步杖</h3>
+                        <div class="product-price">¥ 55</div>
+                        <ul class="product-features">
+                            <li><i class="fas fa-check"></i> 碳纤维材质，超轻重量</li>
+                            <li><i class="fas fa-check"></i> 三节可调节设计</li>
+                            <li><i class="fas fa-check"></i> 防滑橡胶手柄</li>
+                            <li><i class="fas fa-check"></i> 适用日常徒步</li>
+                        </ul>
+                        <a href="cp.html" class="btn">查看详情</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://img01.yzcdn.cn/upload_files/2025/08/22/FpZeLce2hjJm15xQIjiEXVRVjNtc.jpg" alt="专业登山杖">
+                        <div class="product-badge">新品</div>
+                    </div>
+                    <div class="product-content">
+                        <h3>专业铝合金登山杖</h3>
+                        <div class="product-price">¥ 23</div>
+                        <ul class="product-features">
+                            <li><i class="fas fa-check"></i> 7075航空铝合金</li>
+                            <li><i class="fas fa-check"></i> 快速锁扣系统</li>
+                            <li><i class="fas fa-check"></i> 防震减震设计</li>
+                            <li><i class="fas fa-check"></i> 适用高强度登山</li>
+                        </ul>
+                        <a href="wujie.html" class="btn">查看详情</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://t15.baidu.com/it/u=3449238186,2653602515&fm=224&app=112&f=JPEG?w=500&h=500" alt="折叠登山杖">
+                    </div>
+                    <div class="product-content">
+                        <h3>登山杖配件</h3>
+                        <div class="product-price">¥ 9.9</div>
+                        <ul class="product-features">
+                            <li><i class="fas fa-check"></i> 圆形加厚脚套</li>
+                            <li><i class="fas fa-check"></i> 直柄弯柄手柄头配件</li>
+                            <li><i class="fas fa-check"></i> 防滑杖尖保护套</li>
+                            <li><i class="fas fa-check"></i> 安全外锁锁配扣件</li>
+                        </ul>
+                        <a href="suopei.html" class="btn">查看详情</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 工厂自销 -->
+    <section class="guides" id="guides">
+        <div class="container">
+            <div class="section-title">
+                <h2>源头工厂</h2>
+                <p>去源头工厂，拿一手货源</p>
+            </div>
+            <div class="guides-grid">
+                <div class="guide-card">
+                    <div class="guide-image">
+                        <img src="C:\Users\41709\Desktop\编程\jquery\jvft.html\1.png" alt="生产线">
+                    </div>
+                    <div class="guide-content">
+                        <h3>干净的工厂环境</h3>
+                        
+                        <div class="guide-meta">
+                    
+                        </div>
+                    </div>
+                </div>
+                <div class="guide-card">
+                    <div class="guide-image">
+                        <img src="C:\Users\41709\Desktop\编程\jquery\jvft.html\2.png" alt="正确使用方法">
+                    </div>
+                    <div class="guide-content">
+                        <h3>登山杖专业设备</h3>
+                       
+                        <div class="guide-meta">
+                        </div>
+                    </div>
+                </div>
+                <div class="guide-card">
+                    <div class="guide-image">
+                        <img src="C:\Users\41709\Desktop\编程\jquery\jvft.html\3.png" alt="保养维护">
+                    </div>
+                    <div class="guide-content">
+                        <h3>碳纤维登山杖生产</h3>
+                
+                        <div class="guide-meta">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 品牌故事 -->
+    <section class="brand-story" id="story">
+        <div class="container">
+            <div class="section-title">
+                <h2>品牌故事</h2>
+                <p>我们致力于为户外爱好者提供最优质的登山装备</p>
+            </div>
+            <div class="story-content">
+                <div class="story-text">
+                    <h2>源于热爱，专于品质</h2>
+                    <p>   康阳户外有限公司十多年来一直专注于专业户外登山杖的研发，致力于为全球户外爱好者提供高性能装备。我们汇聚了众多专业人才
+                        与该行业在生产杆件研发方面。该产品采用航空级铝合金/碳纤维材质，结合人体工学设计，在轻量化与耐用性之间达到平衡，适用于雨林、沙漠等多种场景。
+                        原始减震系统的专利技术有效缓解关节压力，可调节锁扣设计满足个性化使用习惯。我们始终采用连续生产线进行生产，内部制造流程涵盖成型、抛光、表面处理、印刷及组装等全部工序
+                       及包装。</p>
+
+                    <a href="#" class="btn">了解更多</a>
+                </div>
+                <div class="story-image">
+                    <img src="https://images.unsplash.com/photo-1501555088652-021faa106b9b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="品牌故事">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>康阳户外</h3>
+                    <p>专注于提供高品质登山杖和专业的户外装备指南，让您的每一次登山之旅更加安全愉快。</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-zhihu"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>快速链接</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">首页</a></li>
+                        <li><a href="#categories">产品分类</a></li>
+                        <li><a href="#products">热门产品</a></li>
+                        <li><a href="#guides">源头工厂</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>客户服务</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">配送信息</a></li>
+                        <li><a href="#">退换政策</a></li>
+                        <li><a href="#">常见问题</a></li>
+                        <li><a href="#">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>联系信息</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> 宁波市宁海县深圳镇清潭村630号</li>
+                        <li><i class="fas fa-phone"></i> 15258387772</li>
+                        <li><i class="fas fa-envelope"></i> 417095102@qq.com</li>
+                        <li><i class="fas fa-clock"></i> 周一至周五 9:00-18:00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 登山杖专家 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 移动端菜单切换
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // 关闭移动端菜单
+                    document.querySelector('.nav-links').classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
